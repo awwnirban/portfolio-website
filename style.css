@@ -1,0 +1,869 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 20px;
+    background-image: url(images/background_image_mountains.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.backOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.58);
+    z-index: -1;
+}
+
+
+/* ----------NAV BAR---------- */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background-color: rgb(3, 3, 60);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.left {
+    font-size: 13px;
+    margin: 10px;
+    ;
+}
+
+.left span {
+    margin: 10px;
+}
+
+.left a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.left a:hover {
+    color: rgb(190, 154, 224);
+}
+
+.left p {
+    margin: 4px;
+}
+
+.left p i {
+    color: white;
+}
+
+.right .socials i {
+    margin: 5px;
+    color: white;
+    font-size: 23px;
+    transition: transform 0.15s ease;
+}
+
+.right .socials i:hover {
+    transform: scale(1.15);
+}
+
+.right .fa-solid {
+    display: none;
+}
+
+
+/* -----------FIRST SECTION--------- */
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 150px 0;
+
+}
+
+.firstSection>div {
+    width: 40%;
+}
+
+.profilePhoto {
+
+    height: 358px;
+    width: 352px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 1px solid white;
+}
+
+.rightSection {
+    font-size: 2.2rem;
+    margin: 0 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.leftSection {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 50px;
+}
+
+.nameColor {
+    color: rgb(210, 170, 247);
+
+}
+
+#element {
+    color: rgb(210, 170, 247);
+
+}
+
+/* ---------SECOND SECTION----------- */
+
+.secondSection {
+    display: flex;
+    justify-content: space-around;
+    margin: 140px 90px;
+
+}
+
+.secondSection span {
+    font-size: 2.2rem;
+}
+
+.secondSection>div {
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.23);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    padding: 26px 42px;
+}
+
+.secondSection .secondSectionLeft p {
+    font-size: 15px;
+    margin: 15px 0 0 0;
+}
+
+.timeline {
+    background-color: white;
+    width: 2px;
+    height: 17vw;
+    position: absolute;
+    margin: 30px;
+    left: 60px;
+}
+
+.timeline .timelineDot {
+    height: 3px;
+    width: 3px;
+}
+
+.timeline .timelineDash {
+    margin: 24px 0 70px 0;
+    background-color: white;
+    width: 60px;
+    height: 2px;
+    position: relative;
+}
+
+.schoolName {
+    font-size: 13px;
+    position: relative;
+    top: -11px;
+    left: 76px;
+    width: 43vw;
+}
+
+.schoolName div {
+    color: rgb(212, 212, 212);
+}
+
+/* ------SERVICES---------- */
+
+.services {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.services .serviceTitle {
+    font-size: 2.2rem;
+    margin-bottom: 100px;
+}
+
+.serviceContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 60px;
+    margin: 50px 15vw;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.serviceBox {
+    background-color: rgba(127, 127, 127, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    padding: 25px;
+    text-align: left;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+}
+
+.serviceContent i {
+    font-size: 50px;
+
+}
+
+.serviceContent h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.serviceContent p {
+    font-size: 12px;
+    margin: 15px 0;
+}
+
+.serviceBox:hover {
+    transform: translateY(-10px);
+    background-color: rgb(152, 68, 188, 0.8);
+}
+
+/* ------------Projects--------------- */
+
+.projects {
+    margin: 150px 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.projectsLeft {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.projectsLeft .projectTitle {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.projectsRight {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.projectsRight .works {
+    margin: 0 10px;
+}
+
+.works {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    height: 20vw;
+    width: 15vw;
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+.layer {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgb(152, 68, 188));
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.layer h3 {
+    margin: 0 20px;
+}
+
+.layer a {
+    text-decoration: none;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.layer p {
+    margin: 20px;
+    font-size: 12px;
+}
+
+.works:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.works:hover .layer {
+    height: 100%;
+    opacity: 1;
+}
+
+.layer a:hover {
+    background: rgb(255, 17, 112);
+    color: white;
+}
+
+/* --------------VIDEO SAMPLE---------- */
+
+.videoProd {
+    margin: 150px 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.videoRight {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.videoRight .title {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.videoRight p {
+    text-align: right;
+}
+
+.videoLeft {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.videoLeft .videos {
+    margin: 0 10px;
+}
+
+.videos {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.videos img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    height: 20vw;
+    width: 15vw;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+.videoLayer {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(152, 68, 188));
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.videoLayer h3 {
+    margin: 0 20px;
+}
+
+.videoLayer a {
+    text-decoration: none;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.videoLayer p {
+    margin: 20px;
+    font-size: 12px;
+}
+
+.videoLayer a:hover {
+    background: rgb(255, 17, 112);
+    color: white;
+}
+
+.videos:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.videos:hover .videoLayer {
+    height: 100%;
+    opacity: 1;
+}
+
+/* -----------MUSIC------------- */
+
+.music {
+    margin: 150px 50px 0 50px;
+}
+
+.music .title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 4vw;
+    margin-top: 10px;
+}
+
+.musicContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 65px;
+}
+
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    padding: 0 100px;
+
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 15vw;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.musicLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.musicRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.musicLayer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(rgb(214, 118, 255, 0.6), rgba(0, 0, 0, 0.6));
+    overflow: hidden;
+    bottom: 0;
+    right: 18%;
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+.thumbnail:hover .musicLayer {
+    opacity: 1;
+    transform: translateX(45%);
+}
+
+.thumbnail:hover img {
+    transform: translateX(-25%);
+}
+
+.musicIcons {
+    margin: 5px 0;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.musicLayer span {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.musicLayer a {
+    text-decoration: none;
+    color: white;
+}
+
+.musicIcons:hover {
+    transform: scale(1.4);
+}
+
+.musicLeft>div {
+    margin-bottom: 30px;
+}
+
+.musicRight>div {
+    margin-bottom: 30px;
+}
+
+/* --------------Thank you----------- */
+
+.greet {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5vw;
+}
+
+/* ----------------FOOTER------------- */
+footer {
+    margin-top: 30px;
+}
+
+.copyrightText {
+    position: relative;
+    text-align: center;
+    font-size: small;
+    color: rgb(129, 133, 137);
+    padding: 15px 0;
+}
+
+@media screen and (max-width: 600px) {
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(images/bg_mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 2px;
+    }
+
+    nav .left {
+        font-size: 3vw;
+    }
+
+    nav .right .ul {
+        background-color: black;
+    }
+
+    .firstSection {
+        flex-direction: column;
+        margin: 150px 0 80px 0;
+    }
+
+    .firstSection .rightSection {
+        font-size: 1.3rem;
+    }
+
+    .firstSection>div {
+        width: 100%;
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .profilePhoto {
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+    }
+
+    .secondSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px;
+        gap: 40px;
+    }
+
+    .secondSection>div {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .secondSection span,
+    .secondSectionRight span,
+    .services .serviceTitle {
+        font-size: 1.5rem;
+    }
+
+    .secondSection .secondSectionLeft p {
+        font-size: 0.8rem;
+    }
+
+    .secondSectionRight {
+        height: 85vw;
+    }
+
+    .timeline {
+        height: 62%;
+        left: 5px;
+    }
+
+    .timeline .timelineDash {
+        width: 30px;
+    }
+
+    .secondSectionRight .Education {
+        top: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .schoolName {
+        left: 40px;
+    }
+
+    .schoolName,
+    .schoolName div {
+        font-size: 0.6rem;
+        width: 60vw;
+    }
+
+
+    .services .serviceTitle {
+        margin-top: 55px;
+        margin-bottom: 30px;
+    }
+
+    .serviceContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 60px 20px 20px;
+        height: 160px;
+    }
+
+    .serviceContainer>div {
+        padding: 10px;
+        font-size: 0.5rem;
+    }
+
+    .serviceContent i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .serviceContent h2 {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .serviceContent p {
+        opacity: 0;
+        font-size: 10px;
+        margin: 15px 0;
+    }
+
+    .serviceBox {
+        height: 50%;
+    }
+
+    .projects {
+        flex-direction: column;
+        margin: 10px 20px;
+        min-width: 300px;
+    }
+
+    .projects .projectTitle,
+    .videoRight .title,
+    .music .title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .projectsLeft p,
+    .videoRight p {
+        text-align: center;
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    .projectsLeft {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .projectsRight {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        height: 80vw;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+
+    .projectsRight>div {
+        flex: 0 0 auto;
+        width: 60%;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+    }
+
+
+    .works img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .videoProd {
+        flex-direction: column-reverse;
+        margin: 80px 20px;
+    }
+
+    .videoLeft,
+    .videoRight {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .videoLeft {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        height: 80vw;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    .videos {
+        flex: 0 0 auto;
+        width: 60%;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+    }
+
+    .videos img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .music {
+        margin: 50px 0;
+
+    }
+
+    .musicContainer {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .thumbnail {
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+
+    .thumbnail img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        border: none;
+        object-fit: cover;
+    }
+
+    .musicLayer {
+        width: 100%;
+        height: 100%;
+        right: 0;
+        transform: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .thumbnail:hover .musicLayer {
+
+        transform: translateX(30%);
+    }
+
+    .thumbnail:hover img {
+        transform: translateX(-40%);
+    }
+
+    .musicLeft .musicLayer span {
+        font-size: 15px;
+        margin-top: 0px;
+    }
+
+    .musicLeft .musicLayer .musicIcons {
+        margin: 2.5px 0;
+        font-size: 25px;
+    }
+
+    .greet span {
+        font-size: 1rem;
+    }
+
+    .copyrightText {
+        font-size: 0.7rem;
+    }
+}
