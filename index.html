@@ -49,7 +49,7 @@
         <!-- -----------FIRST SECTION------------>
 
         <div class="backOverlay"></div>
-        <section class="firstSection">
+        <section class="firstSection reveal">
             <div class="leftSection">
                 <img src="images/profile.jpg" alt="Profile Photo" class="profilePhoto">
             </div>
@@ -62,7 +62,7 @@
             <!-- -----------SECOND SECTION------------>
 
         </section>
-        <section class="secondSection">
+        <section class="secondSection reveal">
             <div class="secondSectionLeft">
                 <span>Who Am I?</span>
                 <p>
@@ -108,7 +108,7 @@
 
         <!-- -----------SERVICES------------>
 
-        <sction class="services">
+        <sction class="services reveal">
             <div class="serviceTitle">My Services</div>
             <div class="serviceContainer">
                 <div class="serviceBox">
@@ -138,7 +138,7 @@
 
 
         </sction>
-        <section class="projects">
+        <section class="projects reveal">
             <div class="projectsLeft">
                 <div class="projectTitle">Projects</div>
                 <p>A showcase of creative and technical projects, built with passion, precision, and a drive for
@@ -180,7 +180,7 @@
 
         <!-- -----------VIDEO PROD------------>
 
-        <section class="videoProd">
+        <section class="videoProd reveal">
 
             <div class="videoLeft">
                 <div class="videos">
@@ -220,7 +220,7 @@
 
 
         </section>
-        <section class="music">
+        <section class="music reveal">
             <div class="title">Music Works</div>
             <div class="musicContainer">
                 <div class="musicLeft">
@@ -256,7 +256,7 @@
             </div>
         </section>
 
-        <section class="greet">
+        <section class="greet reveal">
             <span>oh, you actually stayed? thanks, i guess.</span>
         </section>
 
@@ -274,6 +274,18 @@
             typeSpeed: 50,
             loop: true
         });
+                const reveals = document.querySelectorAll('.reveal');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, i) => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.transitionDelay = `${i * 0.2}s`;
+                            entry.target.classList.add('active');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                reveals.forEach((el) => observer.observe(el));
     </script>
 </body>
 
